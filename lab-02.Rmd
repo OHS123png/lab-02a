@@ -17,9 +17,7 @@ library(readxl)
 
 ```{r load-data, message = FALSE}
 # Member 2 (pair 1) write code to load File 1 data here:
-library(readr)
-Country_or_territory_name_ <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
-View(Country_or_territory_name_)
+data1 <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
 
 
 # Member 4 (pair 2) write code to load File 2 data here:
@@ -39,22 +37,29 @@ data4 <- read_excel("data/UN_country_region.xlsx")
 
 ```{r join-data, message = FALSE}
 # Member 2 (pair 1) write code to create object 'plastic_data_all':
-
+plastic_data_all <- data1
 
 
 
 # Member 4 (pair 2) write code to join your data to 'plastic_data_all':
-
+plastic_data_all <- data2 %>%
+  select(-name) %>%
+  left_join(plastic_data_all, by = "code")
 
 
 
 # Member 1 (pair 1) write code to join your data to 'plastic_data_all':
-
+plastic_data_all <- data3 %>%
+  select(-name) %>%
+  right_join(plastic_data_all, by = "code")
 
 
 
 # Member 3 (pair 2) write code to join your data to 'plastic_data_all':
 
+plastic_data_all <- data4 %>%
+  select(-name) %>%
+  right_join(plastic_data_all, by = "code")
 
 
 ```
