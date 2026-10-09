@@ -1,6 +1,6 @@
 ---
 title: "Lab 02 - Global plastic waste"
-author: "Team Name: Oscar, Rishon, Nicholas, Yuntian"
+author: "mean machine: Oscar, Rishon, Nicholas, Yuntian"
 date: "`r Sys.Date()`"
 output: html_document
 ---
