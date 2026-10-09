@@ -17,7 +17,9 @@ library(readxl)
 
 ```{r load-data, message = FALSE}
 # Member 2 (pair 1) write code to load File 1 data here:
-
+library(readr)
+Country_or_territory_name_ <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
+View(Country_or_territory_name_)
 
 
 # Member 4 (pair 2) write code to load File 2 data here:
